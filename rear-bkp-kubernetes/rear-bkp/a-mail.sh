@@ -5,14 +5,13 @@ rm -rf /opt/workspace/rear-bkp/mails/new.txt
 
 #mail variables
 
-SMTP_HOST=apmosys.icewarpcloud.in
+SMTP_HOST=mailserver-url
 SMTP_PORT=587
-SMTP_AUTH_MAILID='admin@apmosys.com'
+SMTP_AUTH_MAILID='auth-same-as-sender@emailid.com'
 #SMTP_AUTH_PASSWD=$(cat /root/mails/.secret_vault.txt | openssl enc -aes-256-cbc -md sha512 -a -d -pbkdf2 -iter 100000 -salt -pass pass:'secret#vault!password')
-SENDER_MAILID='admin@apmosys.com'
-RECEIVER_MAILID='awais.khan@apmosys.com admin@apmosys.com mohamed.rafik@apmosys.com'
-#RECEIVER_MAILID='awais.khan@apmosys.com'
-SMTP_AUTH_PASSWD='Ema!2022'
+SENDER_MAILID='sender@emailid.com'
+RECEIVER_MAILID='reciever1@emailid.com reciever2@emailid.com'
+SMTP_AUTH_PASSWD='mail-password'
 
 date=$(date)
 
