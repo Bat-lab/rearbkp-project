@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ansible-deployment
+  namespace: devops-tools
+spec:
+  selector:
+    matchLabels:
+      app: ansible
+  replicas: 1 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: ansible
+    spec:
+      containers:
+      - name: ansible
+        image: bathub/ssh-ansible:5.0
+        env:
+        - name: ROOT_PASS
+          value: "@pm05ys%2021"
+        - name: TZ
+          value: "Asia/Kolkata"
+        ports:
+        - containerPort: 22
+        volumeMounts:
+        - name: ansible-data
+          mountPath: /opt
+      volumes:
+        - name: ansible-data
+          persistentVolumeClaim:
+              claimName: ansible-pv-claim

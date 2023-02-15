@@ -1,0 +1,26 @@
+kubectl create namespace devops-tools
+kubectl get namespaces
+kubectl apply -f serviceAccount.yaml
+vim volume.yaml
+kubectl get node
+replace node name in volume.yaml (in this one it is as)
+kubectl create -f volume.yaml 
+vim deployment.yaml
+kubectl apply -f deployment.yaml 
+watch -n 2 kubectl get pods --namespace devops-tools
+vim service.yaml
+kubectl apply -f service.yaml 
+kubectl get svc --namespace devops-tools
+curl 192.168.12.77:32000
+
+
+prod
+kubectl create namespace devops-tools
+kubectl get namespaces
+kubectl apply -f serviceAccount.yaml
+vim volume.yaml 
+kubectl apply -f volume.yaml 
+kubectl apply -f deployment.yaml 
+kubectl apply -f ansible-deployment.yaml 
+kubectl apply -f service.yaml 
+kubectl apply -f ansible-service.yaml 

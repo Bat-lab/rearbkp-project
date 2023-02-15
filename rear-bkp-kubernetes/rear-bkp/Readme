@@ -1,0 +1,13 @@
+these should be as below
+
+#############ansible.cfg#################
+
+[defaults]
+host_key_checking = false
+
+
+########/etc/ssh/sshd_config#############
+
+
+PubkeyAuthentication yes
+PermitRootLogin yes
