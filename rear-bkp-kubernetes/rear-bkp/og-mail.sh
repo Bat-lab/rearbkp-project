@@ -11,7 +11,7 @@ SMTP_AUTH_MAILID='admin@apmosys.com'
 #SMTP_AUTH_PASSWD=$(cat /root/mails/.secret_vault.txt | openssl enc -aes-256-cbc -md sha512 -a -d -pbkdf2 -iter 100000 -salt -pass pass:'secret#vault!password')
 SENDER_MAILID='admin@apmosys.com'
 RECEIVER_MAILID='mohamed.rafik@apmosys.com awais.khan@apmosys.com admin@apmosys.com mohamed.rafik@apmosys.com'
-SMTP_AUTH_PASSWD='Ema!2022'
+SMTP_AUTH_PASSWD='password'
 
 date=$(date)
 

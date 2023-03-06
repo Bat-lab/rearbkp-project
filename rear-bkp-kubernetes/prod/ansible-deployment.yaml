@@ -18,7 +18,7 @@ spec:
         image: bathub/ssh-ansible:5.0
         env:
         - name: ROOT_PASS
-          value: "@pm05ys%2021"
+          value: "Root@password"
         - name: TZ
           value: "Asia/Kolkata"
         ports:
